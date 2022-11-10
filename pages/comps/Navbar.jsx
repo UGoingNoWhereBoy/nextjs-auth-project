@@ -45,7 +45,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <ul className="flex flex-wrap p-2 family-font bg-slate-900">
+      <ul className="flex flex-wrap p-2 family-font bg-slate-900 wordwrapnav">
         <Link href={"/"}>
           <a
             className="text-xl text-purple-600 p-2 m-2  rounded-xl hover:bg-slate-800  hover:dark:bg-slate-800

@@ -1,13 +1,14 @@
 import '../styles/globals.css'
 import Layout from './comps/Layout'
 import { SessionProvider } from 'next-auth/react'
+import {SSRProvider} from '@react-aria/ssr'; 
 
 function MyApp({ Component, pageProps, session }) {
   return (
-  <div className='w-[100%]'>
-
+  <div>
+  <SSRProvider>
   <SessionProvider session={session}>
-
+  
     <Layout>
       
       <Component {...pageProps} />
@@ -15,7 +16,7 @@ function MyApp({ Component, pageProps, session }) {
     </Layout>
 
   </SessionProvider>
-  
+  </SSRProvider>
   </div>
   )
 }

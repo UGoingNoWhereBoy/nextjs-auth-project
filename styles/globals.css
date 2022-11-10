@@ -14,6 +14,7 @@ body {
     background-attachment: fixed;
     transition: all 350ms;  
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 
 }
 
@@ -42,6 +43,23 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.3);
 
 }
+/* Fixes for words and footer */
+.wordwrapnav {
+    word-break: break-all;
+}
+@media (max-width: 130px) {
+    .wordwrapnav{
+        word-break: normal;
+    }
+}
+.wordwrap{
+    word-break: break-all;
+}
+@media (max-width: 1000px) {
+    .fixfooter{
+        position: static;
+    }
+}
 /* hide login box */
 .hide {
     display: none;
@@ -52,8 +70,6 @@ body {
 .family-font { 
     font-family: 'Titillium Web', sans-serif;
 }
-
-
 
 
 /* ModeToggle animation */
