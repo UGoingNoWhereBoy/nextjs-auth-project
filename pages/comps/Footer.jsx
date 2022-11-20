@@ -7,7 +7,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='absolute w-screen bottom-0 text-center flex justify-center bg-slate-900 fixfooter'>
+    <div className='text-center flex justify-center bg-slate-900 mt-16 fixfooter'>
 
         <ul className='flex text-purple-600 dark:text-sky-500 font-bold text-2xl mr-auto'>
             

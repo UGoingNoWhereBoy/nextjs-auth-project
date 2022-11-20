@@ -55,11 +55,7 @@ body {
 .wordwrap{
     word-break: break-all;
 }
-@media (max-width: 1000px) {
-    .fixfooter{
-        position: static;
-    }
-}
+
 /* hide login box */
 .hide {
     display: none;

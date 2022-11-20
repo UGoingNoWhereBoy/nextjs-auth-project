@@ -96,7 +96,7 @@ const Navbar = () => {
         )}
 
         <li
-          className="text-3xl mt-4 text-purple-600 dark:text-sky-500 cursor-pointer h-fit"
+          className="text-3xl mt-4 text-purple-600 dark:text-sky-500 cursor-pointer h-fit mr-4"
           onClick={handleTheme}
         >
           {icon}

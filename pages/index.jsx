@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { getSession } from "next-auth/react";
 import { MdDeleteForever } from 'react-icons/md'
-import { AiOutlineEdit } from 'react-icons/ai'
+
 const index = ({session}) => {
 
   const [posts, setPosts] = useState()
