@@ -13,13 +13,13 @@ const Footer = () => {
             
             <a href='https://www.linkedin.com/in/eyad-93327b244'
              className='m-2 cursor-pointer hover:scale-110 ease-linear duration-150'
-             target={'_blank'} rel="noreferrer"><FaLinkedin /></a>
+             target={'_blank'}><FaLinkedin /></a>
             <a href='https://discord.com/users/UGoingNoWhereBoy#1736'
              className='m-2 cursor-pointer hover:scale-110 ease-linear duration-150'
-             target={'_blank'} rel="noreferrer"><FaDiscord /></a>
+             target={'_blank'}><FaDiscord /></a>
             <a href='https://github.com/UGoingNoWhereBoy'
              className='m-2 cursor-pointer hover:scale-110 ease-linear duration-150'
-             target={'_blank'} rel="noreferrer"><FaGithub /></a>
+             target={'_blank'}><FaGithub /></a>
             
         </ul>
         <div className='text-center flex justify-center mr-auto mt-2 text-purple-600 dark:text-sky-500'>

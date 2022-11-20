@@ -1,18 +1,18 @@
 import React from "react";
 import { getSession } from "next-auth/react";
-import { UseFormik } from "formik";
+import { useFormik } from "formik";
 import { BsCardHeading } from "react-icons/bs";
 import { GoRocket } from 'react-icons/go'
 import * as Yup from "yup";
 import { Textarea, Grid, Input, css, Button, Progress, Text } from "@nextui-org/react";
-import { UseState } from "react";
+import { useState } from "react";
 
 const newpost = ({session}) => {
   
-  const [loading, setLoading] = UseState()
-  const [newError, setError] = UseState()
+  const [loading, setLoading] = useState()
+  const [newError, setError] = useState()
  
-  const formik = UseFormik({
+  const formik = useFormik({
     initialValues: {
       title: "",
       description: "",
@@ -113,7 +113,7 @@ const newpost = ({session}) => {
                 ? <Button bordered color="success" auto>
                     Success
                   </Button>
-                : newError == "error401" ?
+                : newError == 'error401' ?
                  <Button bordered color="error" auto>
                     You're limited to one post.
                   </Button> : null}

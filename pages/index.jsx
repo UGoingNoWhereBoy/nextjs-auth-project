@@ -1,11 +1,12 @@
-import React, { useEffect as UseEffect, useState as UseState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { getSession } from "next-auth/react";
 import { MdDeleteForever } from 'react-icons/md'
 
 const index = ({session}) => {
 
-  const [Posts, Setposts] = UseState()
+  const [posts, setPosts] = useState()
+  const [deleteStatus, setDeleteStatus] = useState()
 
   const handleDelete = async(e) => {
     const deleteItem = await fetch('/api/deletepost',{
@@ -23,9 +24,8 @@ const index = ({session}) => {
   }
 
 
-  UseEffect(()=> {
-    
-    axios.get('/api/getposts').then(res => Setposts(res.data.getposts))
+  useEffect(()=> {
+    axios.get('/api/getposts').then(res => setPosts(res.data.getposts))
     
   },[])
  
@@ -34,7 +34,7 @@ const index = ({session}) => {
     <div className='p-2 mt-28'>
       <div className='flex justify-center flex-wrap'>
    
-      {Posts && Posts?.map((i, k) => (
+      {posts && posts?.map((i, k) => (
         <div key={k} className="glass flex justify-center text-purple-600 dark:text-sky-500
          w-[300px] h-[300px] flex-col p-2 m-4 flex-wrap hover:scale-110 duration-300 ease-in-out">
           
