@@ -1,29 +1,29 @@
-import React, { useState } from "react";
+import React, { useState as UseState } from "react";
 import { SlUser } from "react-icons/sl";
 import { RiLockPasswordLine, RiGithubFill } from "react-icons/ri";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { SiDiscord, SiReact } from "react-icons/si";
 import { BiShow, BiHide } from "react-icons/bi";
 import "@djthoms/pretty-checkbox";
-import { useSession, getProviders, signIn } from "next-auth/react";
+import { useSession as UseSession, getProviders, signIn } from "next-auth/react";
 import { getSession } from 'next-auth/react'
 import Btn from "./comps/Customstyles";
-import { useFormik } from "formik";
+import { useFormik as UseFormik } from "formik";
 
 const login = ({ providers }) => {
 
-  const { data: session } = useSession();
+  const { data: session } = UseSession();
 
-  const [passIcon, setPassicon] = useState(<BiShow />);
+  const [passIcon, setPassicon] = UseState(<BiShow />);
 
-  const [isHidden, setHidden] = useState(true)
+  const [isHidden, setHidden] = UseState(true)
 
-  const [userStatus, setUserStatus] = useState('')
+  const [userStatus, setUserStatus] = UseState('')
 
-  const [loading, setLoading] = useState()
+  const [loading, setLoading] = UseState()
 
   
-  const formik = useFormik({
+  const formik = UseFormik({
     initialValues: {
       name: '',
       password: '',

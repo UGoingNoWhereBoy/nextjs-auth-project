@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { useRouter } from 'next/router'
+import React, { UseState } from "react";
+import { UseRouter } from 'next/router'
 import { SlUser } from "react-icons/sl";
 import { RiLockPasswordLine} from "react-icons/ri";
 import { BiShow, BiHide, BiWorld, BiError } from "react-icons/bi";
 import { MdAlternateEmail } from "react-icons/md";
 import { SiReact } from 'react-icons/si'
 import "@djthoms/pretty-checkbox";
-import { useSession, getProviders} from "next-auth/react";
+import { UseSession, getProviders} from "next-auth/react";
 import Btn from "./comps/Customstyles";
-import { useFormik } from "formik";
+import { useFormik as UseFormik } from "formik";
 import * as Yup from 'yup';
 import { Tooltip } from '@nextui-org/react';
 import { getSession } from 'next-auth/react'
@@ -16,20 +16,20 @@ import { getSession } from 'next-auth/react'
 
 const login = ({ providers }) => {
 
-  const { data: session } = useSession();
+  const { data: session } = UseSession();
 
-  const [passIcon, setPassicon] = useState(<BiShow />);
+  const [passIcon, setPassicon] = UseState(<BiShow />);
 
-  const [isHidden, setHidden] = useState(true)
+  const [isHidden, setHidden] = UseState(true)
 
-  const [hasError, setError] = useState()
+  const [hasError, setError] = UseState()
   
-  const [loading, setLoading] = useState()
+  const [loading, setLoading] = UseState()
 
-  let router = useRouter()
+  let router = UseRouter()
 
 
-  const formik = useFormik({
+  const formik = UseFormik({
     initialValues: {
       name: '',
       email: '',
